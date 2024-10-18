@@ -25,7 +25,7 @@ import laika.io.syntax.*
 import laika.io.model.*
 import laika.sbt.LaikaPlugin.autoImport.*
 import sbt.Keys.*
-import sbt.*
+import sbt.{*, given}
 import sbt.util.CacheStore
 import Settings.validated
 import cats.data.NonEmptyChain
