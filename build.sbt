@@ -23,6 +23,12 @@ inThisBuild(
     crossScalaVersions := Seq(versions.scala2_12, versions.scala2_13, versions.scala3),
     scalaVersion       := versions.scala2_12,
     developers         := List(Developer("jenshalm", "Jens Halm", "", url("http://planet42.org"))),
+    (pluginCrossBuild / sbtVersion) := {
+      scalaBinaryVersion.value match {
+        case "2.12" => "1.5.8"
+        case _      => "2.0.0-M2"
+      }
+    },
     tlCiHeaderCheck    := false,
     tlCiDependencyGraphJob := false,
     githubWorkflowJavaVersions += JavaSpec.temurin("17"),

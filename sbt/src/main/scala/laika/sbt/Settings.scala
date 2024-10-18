@@ -33,7 +33,7 @@ import laika.io.syntax.*
 import laika.io.model.{ FilePath, InputTree, InputTreeBuilder }
 import laika.sbt.LaikaPlugin.autoImport.*
 import sbt.Keys.*
-import sbt.*
+import sbt.{given, *}
 
 /** Implementations for Laika's sbt settings.
   *

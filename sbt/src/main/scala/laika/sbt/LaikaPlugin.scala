@@ -22,7 +22,7 @@ import laika.helium.Helium
 import laika.io.config.RendererConfig
 import laika.theme.ThemeProvider
 import sbt.Keys.*
-import sbt.*
+import sbt.{given, *}
 
 /** Plugin that adapts the features of the Laika library for use from within sbt.
   *
@@ -187,7 +187,7 @@ object LaikaPlugin extends AutoPlugin {
     laikaPackageSite            := Tasks.packageSite.value,
     laikaPreview                := Tasks.startPreviewServer.value,
     Laika / clean               := Tasks.clean.value,
-    laikaSite / mappings        := Def.sequential(Tasks.site, Tasks.mappings).value
+//    laikaSite / mappings        := Def.sequential(Tasks.site, Tasks.mappings).value
   ) :+ (cleanFiles += (Laika / target).value)
 
 }
